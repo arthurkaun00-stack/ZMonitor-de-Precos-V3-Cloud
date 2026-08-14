@@ -29,4 +29,4 @@ Url: {url}'''
     res = requests.post(url_telegram, json=dados)
     status = res.status_code
 
-    Painel_save(nome, preco, data, url, status).iniciar()
+    Painel_save(nome, preco, data, url, status)
