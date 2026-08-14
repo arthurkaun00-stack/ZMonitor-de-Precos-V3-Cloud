@@ -1,132 +1,80 @@
-# 🛒 ZMonitorDePreço
+<div align="center">
 
-Um monitor automático de preços desenvolvido em Python.
+# 🛒 ZMonitorDePreço V2 (POO)
 
-O programa monitora produtos em lojas online e envia uma notificação pelo Telegram quando encontra um novo menor preço. Além disso, salva o histórico de preços em um banco de dados SQLite e possui interface gráfica desenvolvida com CustomTkinter.
+**Um monitor automático e inteligente de preços desenvolvido em Python com Orientação a Objetos.**
 
----
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![Telegram](https://img.shields.io/badge/Telegram-Bot_API-26A5E4.svg?style=for-the-badge&logo=telegram&logoColor=white)](https://core.telegram.org/bots/api)
+[![CustomTkinter](https://img.shields.io/badge/GUI-CustomTkinter-blueviolet.svg?style=for-the-badge)](https://github.com/TomSchimansky/CustomTkinter)
 
-# 📌 Funcionalidades
+*Receba alertas no Telegram em tempo real assim que seus produtos favoritos atingirem o menor preço!*
 
-- ✅ Monitoramento automático de preços
-- ✅ Cadastro de vários produtos
-- ✅ Interface gráfica (CustomTkinter)
-- ✅ Histórico de preços em SQLite
-- ✅ Notificações automáticas pelo Telegram
-- ✅ Tratamento de erros para URL, nome e preço
-- ✅ Configuração segura utilizando arquivo `.env`
+</div>
 
 ---
 
-# 🛠 Tecnologias utilizadas
+## 📌 Sobre o Projeto
 
-- Python 3
-- Requests
-- BeautifulSoup4
-- SQLite3
-- CustomTkinter
-- Telegram Bot API
-- python-dotenv
+O **ZMonitorDePreço** é uma aplicação completa para monitoramento contínuo de produtos em lojas online. O sistema raspa informações de preços, armazena o histórico em um banco de dados local SQLite e notifica o usuário via Telegram sempre que um novo menor preço for detectado.
+
+A versão 2.0 foi reformulada utilizando **Programação Orientada a Objetos (POO)** na interface gráfica e conta com uma arquitetura modularizada para facilitar a manutenção e expansão.
 
 ---
 
-# 📂 Estrutura do projeto
+## ✨ Funcionalidades
 
-```
-ZMonitorDePreco/
+- 🔄 **Monitoramento Automatizado:** Checagem periódica dos preços cadastrados.
+- 🎨 **Interface Gráfica em POO:** Telas interativas para cadastro, validação e busca com CustomTkinter.
+- 📊 **Banco de Dados SQLite:** Armazenamento automático do histórico de preços.
+- 📲 **Notificações no Telegram:** Alertas diretos no celular com suporte a mensagens formatadas.
+- 🛠️ **Tratamento Dinâmico de Erros:** Telas de correção para URLs, nomes ou preços não encontrados.
+- 🔒 **Segurança:** Configurações sensíveis (Tokens e Chat IDs) protegidas via `.env`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+ZMonitorDePreço V2 com POO/
 │
-├── main.py
-├── interface.py
-├── collect_data.py
-├── scraper.py
-├── database.py
-├── Telegrambot.py
-├── monitor.db
-├── .env
-├── requirements.txt
-└── README.md
-```
+├── 📄 01_main.py         # Script principal e loop de execução
+├── 🖥️ interface.py       # Classes da interface gráfica (CustomTkinter)
+├── 🕵️ scraper.py         # Extração e raspagem de dados web (BeautifulSoup4)
+├── 📊 collect_data.py    # Lógica de verificação e comparação de preços
+├── 🗄️ database.py        # Gerenciamento do banco de dados SQLite3
+├── 💬 Telegrambot.py     # Integração e envio de alertas via Telegram
+├── 🔒 .env               # Variáveis de ambiente
+├── 📋 requirements.txt   # Dependências do projeto
+└── 📘 README.md          # Documentação do projeto
+🛠️ Tecnologias Utilizadas
+Linguagem: Python 3
 
----
+Interface Gráfica: CustomTkinter
 
-# ⚙️ Como instalar
+Web Scraping: Requests, BeautifulSoup4
 
-Clone o repositório:
+Banco de Dados: SQLite3
 
-```bash
-git clone https://github.com/SEU-USUARIO/ZMonitorDePreco.git
-```
+Notificações: Telegram Bot API
 
-Entre na pasta:
+Variáveis de Ambiente: python-dotenv
 
-```bash
+⚙️ Como Instalar e Executar
+1. Clonar o repositório
+Bash
+git clone [https://github.com/arthurkaun00-stack/ZMonitorDePreco.git](https://github.com/arthurkaun00-stack/ZMonitorDePreco.git)
 cd ZMonitorDePreco
-```
-
-Instale as dependências:
-
-```bash
+2. Instalar dependências
+Bash
 pip install -r requirements.txt
-```
+3. Configurar variáveis de ambiente
+Crie um arquivo .env na raiz do projeto com as suas credenciais do Telegram:
 
----
-
-# 🔑 Configuração
-
-Crie um arquivo chamado `.env` na pasta do projeto.
-
-Exemplo:
-
-```env
-TOKEN=SEU_TOKEN
+Snippet de código
+TOKEN=SEU_TOKEN_DO_TELEGRAM
 CHAT_ID=SEU_CHAT_ID
-```
-
----
-
-# ▶️ Como executar
-
-Execute o arquivo principal:
-
-```bash
-python main.py
-```
-
----
-
-# 📸 Imagens
-
-## Interface Principal
-
-![alt text](Interface_Principal.png)
-
-## Produto Monitorado
-
-![alt text](Produto_Monitorado.png)
-
-## Notificação no Telegram
-
-![alt text](Notificação_no_Telegram.png)
-
----
-
-# 🚀 Melhorias futuras
-
-- Implementação com Programação Orientada a Objetos (POO)
-- Logs de execução
-- Deploy 24/7
-- Testes automatizados
-- Melhor organização do código
-- Interface ainda mais completa
-
----
-
-# 👨‍💻 Autor
-
-Arthur
-
-GitHub:
-https://github.com/arthurkaun00-stack
----
-
-⭐ Se este projeto foi útil para você, deixe uma estrela no repositório!
+4. Executar a aplicação
+Bash
+python 01_main.py

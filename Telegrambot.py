@@ -1,4 +1,4 @@
-from interface import painel_salve
+from models import Painel_save
 import requests
 from dotenv import load_dotenv
 import os
@@ -29,4 +29,4 @@ Url: {url}'''
     res = requests.post(url_telegram, json=dados)
     status = res.status_code
 
-    painel_salve(nome, preco, data, url, status)
+    Painel_save(nome, preco, data, url, status).iniciar()
