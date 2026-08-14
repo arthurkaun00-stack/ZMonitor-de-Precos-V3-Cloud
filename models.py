@@ -31,7 +31,11 @@ class Quer_continuar:
         while self.Resposta not in ('S', 'N'):
             self.Resposta = input('Quer continuar?[S/N]: ').upper()
     def iniciar(self):
-        return self.Resposta
+        if self.Resposta == 'N':
+            return self.Resposta        
+        else:
+            return False
+
 
 #a = Quer_continuar()
 
