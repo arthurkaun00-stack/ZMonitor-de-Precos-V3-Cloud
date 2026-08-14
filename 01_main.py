@@ -20,6 +20,6 @@ def main():
         while True:
             for prod in lista:
                 vereficar_produto(prod)
-            sleep(86)
+            sleep(86400)
 if __name__ == '__main__':
     main()

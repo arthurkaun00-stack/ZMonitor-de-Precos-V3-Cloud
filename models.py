@@ -65,7 +65,7 @@ class Erro:
             return self.n1, self.n2
         else:
             return self.nu
-a = Erro()
+#a = Erro()
 
 def preco_erro(p1='', p2='', url=''):
     janela = Erro(v1=p1, v2=p2, url=url, tipo_erro='URL PREÇO')
